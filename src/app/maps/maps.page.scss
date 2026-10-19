@@ -1,0 +1,72 @@
+ion-content {
+  --background: #fff0f6;
+}
+
+ion-header ion-toolbar {
+  --background: #ff69b4;
+  --color: white;
+  text-align: center;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+ion-title ion-icon {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* Container peta */
+#map {
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+
+  margin: 15px auto;
+
+  border-radius: 25px;
+  overflow: hidden;
+
+  background: white;
+
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.25);
+}
+
+/* Tampilan Leaflet */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 25px;
+
+  font-family: Arial, sans-serif;
+}
+
+/* Tombol zoom */
+.leaflet-control-zoom {
+  border: none !important;
+  border-radius: 12px !important;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.25) !important;
+}
+
+.leaflet-control-zoom a {
+  color: #d14d8b !important;
+  background: white !important;
+
+  font-weight: bold;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #fff0f6 !important;
+  color: #ff69b4 !important;
+}
+
+/* Attribution OpenStreetMap */
+.leaflet-control-attribution {
+  font-size: 9px;
+  border-radius: 8px 0 0 0;
+}

@@ -1,0 +1,193 @@
+
+/* Background halaman */
+ion-content {
+  --background: #fff0f6;
+  --padding-bottom: 20px;
+}
+
+/* Header */
+ion-header ion-toolbar {
+  --background: #ff69b4;
+  --color: white;
+  --border-width: 0;
+}
+
+ion-header ion-toolbar ion-back-button {
+  --color: white;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* Container peta */
+#mapedit {
+  width: calc(100% - 30px);
+  height: 300px;
+
+  margin: 15px auto 20px;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: white;
+
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.20);
+
+  z-index: 1;
+}
+
+/* Tampilan Leaflet */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 20px;
+
+  font-family: Arial, sans-serif;
+}
+
+/* Tombol zoom */
+.leaflet-control-zoom {
+  border: none !important;
+  border-radius: 10px !important;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.25) !important;
+}
+
+.leaflet-control-zoom a {
+  color: #d14d8b !important;
+  background: white !important;
+
+  font-weight: bold;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #fff0f6 !important;
+  color: #ff69b4 !important;
+}
+
+/* Kontrol layer peta */
+.leaflet-control-layers {
+  border: none !important;
+  border-radius: 10px !important;
+
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.20) !important;
+}
+
+.leaflet-control-layers-toggle {
+  border-radius: 10px;
+}
+
+/* Attribution OpenStreetMap */
+.leaflet-control-attribution {
+  font-size: 9px;
+  border-radius: 8px 0 0 0;
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Popup marker */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.15);
+}
+
+.leaflet-popup-content {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #87405f;
+}
+
+/* Card form */
+ion-list {
+  width: calc(100% - 30px);
+
+  margin: 0 auto 20px;
+  padding: 10px 15px;
+
+  background: white;
+  border-radius: 22px;
+
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.15);
+}
+
+/* Item input */
+ion-item {
+  --background: #fff8fb;
+  --color: #87405f;
+  --border-color: #f8dce8;
+  --inner-border-width: 0 0 1px 0;
+  --padding-start: 12px;
+  --inner-padding-end: 12px;
+
+  margin: 8px 0;
+  border-radius: 12px;
+
+  font-size: 14px;
+}
+
+/* Label */
+ion-label {
+  color: #87405f !important;
+  font-weight: 500;
+}
+
+/* Input teks */
+ion-input,
+ion-textarea {
+  --color: #6d354d;
+  --placeholder-color: #d6a4ba;
+  --placeholder-opacity: 1;
+
+  font-size: 14px;
+}
+
+/* Deskripsi */
+ion-textarea {
+  min-height: 90px;
+}
+
+/* Tombol Save */
+ion-button {
+  --background: #ff69b4;
+  --background-hover: #f052a0;
+  --background-activated: #e84c98;
+  --color: white;
+
+  --border-radius: 25px;
+  --box-shadow: 0 5px 12px rgba(255, 105, 180, 0.3);
+
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: none;
+
+  margin: 15px auto;
+  width: calc(100% - 30px);
+}
+
+/* Transisi */
+ion-item,
+ion-button {
+  transition: all 0.2s ease;
+}
+
+/* Tampilan layar kecil */
+@media (max-width: 400px) {
+  #mapedit {
+    height: 280px;
+    border-radius: 18px;
+  }
+
+  ion-list {
+    border-radius: 20px;
+    padding: 8px 12px;
+  }
+
+  ion-title {
+    font-size: 20px;
+  }
+}

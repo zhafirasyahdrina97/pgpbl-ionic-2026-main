@@ -1,0 +1,84 @@
+ion-content {
+  --background: #fff0f6;
+}
+
+.card-section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+ion-card {
+  width: 100%;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.25);
+  overflow: hidden;
+}
+
+ion-card-header {
+  text-align: center;
+  background: linear-gradient(135deg, #ff69b4, #ff9acb);
+  padding: 30px 20px;
+}
+
+ion-card-title {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+ion-card-subtitle {
+  color: #fff5fa;
+  font-size: 14px;
+}
+
+ion-card-content {
+  padding: 25px 20px 30px;
+}
+
+/* Input */
+ion-item {
+  --background: #fff8fb;
+  --border-color: #f5c8dc;
+  --highlight-color-focused: #ff69b4;
+  --color: #6f3652;
+
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+ion-input {
+  --color: #6f3652;
+  --placeholder-color: #c58ca6;
+  --highlight-color-focused: #ff69b4;
+}
+
+/* Tombol Register */
+ion-button[expand="block"]:not([fill="clear"]) {
+  --background: #ff69b4;
+  --background-hover: #ff8fc5;
+  --color: white;
+  --border-radius: 20px;
+
+  margin-top: 20px;
+  height: 48px;
+  font-weight: bold;
+  text-transform: none;
+  box-shadow: 0 5px 12px rgba(255, 105, 180, 0.25);
+}
+
+/* Tombol Login */
+ion-button[fill="clear"] {
+  --color: #d14d8b;
+  --border-radius: 20px;
+
+  margin-top: 5px;
+  font-weight: 600;
+  text-transform: none;
+}

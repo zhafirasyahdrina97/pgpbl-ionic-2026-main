@@ -1,0 +1,91 @@
+ion-content {
+  --background: #fff0f6;
+}
+
+ion-header ion-toolbar {
+  --background: #ff69b4;
+  --color: white;
+  text-align: center;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+ion-title ion-icon {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* Accordion */
+ion-accordion-group {
+  margin: 20px 15px;
+}
+
+ion-accordion {
+  margin-bottom: 12px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.15);
+}
+
+/* Header hari */
+ion-item[slot="header"] {
+  --background: #ffb6d9;
+  --color: #8e315f;
+  font-weight: bold;
+  --padding-start: 18px;
+}
+
+ion-item[slot="header"] ion-label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Isi accordion */
+div[slot="content"] {
+  background: #fff8fb;
+  color: #6f3652;
+}
+
+/* Tabel jadwal */
+ion-grid {
+  margin: 10px 0;
+  padding: 12px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.1);
+}
+
+ion-row {
+  border-bottom: 1px solid #f8d4e4;
+  padding: 8px 0;
+}
+
+ion-row:last-child {
+  border-bottom: none;
+}
+
+ion-col:first-child {
+  color: #d14d8b;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+ion-col:last-child {
+  color: #6f3652;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+/* Efek saat accordion dibuka */
+ion-accordion.accordion-expanded {
+  box-shadow: 0 6px 18px rgba(255, 105, 180, 0.25);
+}
+
+ion-accordion.accordion-expanded ion-item[slot="header"] {
+  --background: #ff8fc5;
+  --color: white;
+}

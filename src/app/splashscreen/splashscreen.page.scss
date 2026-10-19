@@ -1,0 +1,48 @@
+ion-content {
+  --background: #fff0f6;
+}
+
+.splash-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Gambar */
+.splash-section img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: white;
+  border-radius: 35px;
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.2);
+}
+
+/* Loading spinner */
+.splash-section ion-spinner {
+  width: 45px;
+  height: 45px;
+  color: #ff69b4;
+  margin-bottom: 15px;
+}
+
+/* Tulisan Loading */
+.splash-section p {
+  margin: 5px 0;
+  color: #d14d8b;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Versi aplikasi */
+.splash-section small {
+  margin-top: 5px;
+  color: #c58ca6;
+  font-size: 13px;
+}
