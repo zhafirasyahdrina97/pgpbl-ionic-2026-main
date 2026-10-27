@@ -79,50 +79,74 @@ export class MapsPage implements OnInit {
           coordinates as L.LatLngExpression
         ).addTo(this.map);
 
+
         marker.bindPopup(`
-  <strong>${point.name}</strong><br>
-  ${point.description || ''}<br>
-  <small>${point.coordinates}</small><br>
-  <a href="#" class="edit-link" data-key="${key}">Edit</a>
-  |
-  <a href="#" class="delete-link" data-key="${key}">Delete</a>
+  <div class="point-popup">
+    <strong class="point-name">${point.name}</strong>
+    <div class="point-description">
+      ${point.description || ''}
+    </div>
+    <div class="point-coordinates">
+      ${point.coordinates}
+    </div>
+
+    <div class="popup-actions">
+      <button type="button" class="edit-link" data-key="${key}">
+        <ion-icon name="create-outline"></ion-icon>
+        <span>EDIT</span>
+      </button>
+
+      <button type="button" class="delete-link" data-key="${key}" aria-label="Delete">
+        <ion-icon name="trash-outline"></ion-icon>
+      </button>
+    </div>
+  </div>
 `);
+
       }
     }
 
+
+
     this.map.on('popupopen', (e) => {
       const popup = e.popup;
+      const popupElement = popup.getElement();
 
-      // EDIT
-      const editLink = popup.getElement()?.querySelector('.edit-link');
+      if (!popupElement) return;
 
-      if (editLink) {
-        editLink.addEventListener('click', (event) => {
-          event.preventDefault();
+      // EDIT: tetap menuju halaman editpoint
+      const editButton =
+        popupElement.querySelector('.edit-link');
 
-          const key = (event.target as HTMLElement).dataset['key'];
+      editButton?.addEventListener('click', (event) => {
+        event.preventDefault();
 
-          if (key) {
-            this.router.navigate(['/editpoint', key]);
-          }
-        });
-      }
+        const key = (event.currentTarget as HTMLElement)
+          .dataset['key'];
 
-      // DELETE
-      const deleteLink = popup.getElement()?.querySelector('.delete-link');
+        if (key) {
+          this.router.navigate(['/editpoint', key]);
+        }
+      });
 
-      if (deleteLink) {
-        deleteLink.addEventListener('click', (event) => {
-          event.preventDefault();
+      // DELETE: tetap menggunakan fungsi deletePoint
+      const deleteButton =
+        popupElement.querySelector('.delete-link');
 
-          const key = (event.target as HTMLElement).dataset['key'];
+      deleteButton?.addEventListener('click', async (event) => {
+        event.preventDefault();
 
-          if (key) {
-            this.deletePoint(key, popup.getLatLng());
-          }
-        });
-      }
+        const key = (event.currentTarget as HTMLElement)
+          .dataset['key'];
+
+        if (key) {
+          await this.deletePoint(key, popup.getLatLng());
+          this.map.closePopup();
+        }
+      });
     });
+
+
   }
 
   async deletePoint(key: string, latLng: L.LatLng | undefined) {

@@ -38,3 +38,94 @@
 
 // leaflet css
 @import "leaflet/dist/leaflet.css";
+
+
+/* Popup informasi lokasi */
+.leaflet-popup-content-wrapper {
+  border-radius: 16px !important;
+  padding: 4px !important;
+  box-shadow: 0 5px 18px rgba(180, 70, 125, 0.16) !important;
+}
+
+.leaflet-popup-content {
+  margin: 14px 16px !important;
+  min-width: 230px;
+  font-family: Arial, sans-serif;
+  color: #424242;
+}
+
+.point-popup .point-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #333333;
+  margin-bottom: 3px;
+}
+
+.point-popup .point-description {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666666;
+  overflow-wrap: anywhere;
+}
+
+.point-popup .point-coordinates {
+  font-size: 10px;
+  color: #999999;
+  margin-top: 5px;
+  overflow-wrap: anywhere;
+}
+
+/* Baris tombol */
+.point-popup .popup-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+/* Tombol Edit */
+.point-popup .edit-link,
+.point-popup .delete-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 34px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.point-popup .edit-link {
+  padding: 0 13px;
+  background: #ff69b4;
+  color: #ffffff;
+}
+
+.point-popup .delete-link {
+  width: 36px;
+  background: #fff0f6;
+  color: #d94f91;
+  border: 1px solid #ffd1e6;
+}
+
+.point-popup .popup-actions ion-icon {
+  font-size: 17px;
+}
+
+.point-popup .edit-link:hover,
+.point-popup .delete-link:hover {
+  opacity: 0.8;
+}
+
+/* Tombol tutup popup */
+.leaflet-popup-close-button {
+  color: #d96b9e !important;
+  font-size: 20px !important;
+  padding: 7px 9px 0 0 !important;
+}
